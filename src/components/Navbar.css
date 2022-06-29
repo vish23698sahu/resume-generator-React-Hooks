@@ -1,0 +1,18 @@
+.colorBlue {
+    background-color: rgb(37, 28, 118);
+    color: white;
+}
+
+.colorTextWhite {
+    color: white;
+}
+
+.dropdown-toggle:hover {
+    color: white;
+}
+
+.iconLogin {
+    padding-left: 10px;
+    margin-left: 2px;
+    cursor: pointer;
+}
