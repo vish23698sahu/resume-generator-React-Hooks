@@ -1,4 +1,3 @@
-import { isClickableInput } from "@testing-library/user-event/dist/utils";
 import { Fragment, useState } from "react";
 import classes from './Register.module.css';
 
@@ -8,7 +7,6 @@ const Register = props => {
     const [enteredLastName, setEnteredLastName] = useState('');
     const [enteredEmail, setEnteredEmail] = useState('');
     const [enteredPass, setEnteredPass] = useState('');
-    const [detailsEmpty, setDetailsEmpty] = useState(false);
     const [nameEmpty, setNameEmpty] = useState(false);
     const [lNameEmpty, setLNameEmpty] = useState(false);
     const [emailEmpty, setEmailEmpty] = useState(false);
@@ -43,17 +41,14 @@ const Register = props => {
             setLNameEmpty(true);
             return;
         }
-
         if (enteredEmail === '') {
             setEmailEmpty(true);
             return;
         }
-
         if (enteredPass === '') {
             setPassEmpty(true);
             return;
         }
-
         const userDetails = {
             id: 'Math.random(2)',
             firstName: enteredFirstName,
@@ -62,7 +57,6 @@ const Register = props => {
             pass: enteredPass
         };
         props.onSignUp(userDetails);
-        props.onButtonClick();
     };
 
     return (

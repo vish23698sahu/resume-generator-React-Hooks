@@ -3,7 +3,8 @@ import { Fragment } from "react";
 const AboutUs = () => {
     return (
         <Fragment>
-            <title>About ResumeJob</title>
+            <h1>Hello </h1>
+            <h2>Let's know about Us</h2>
         </Fragment>
     );
 };

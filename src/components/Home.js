@@ -1,59 +1,82 @@
-import { Fragment } from "react";
-import './Home.css';
-import logo1 from '../images/resume-1.jpg';
-import logo2 from '../images/resume-2.jpg';
-import logo3 from '../images/resume-3.png';
-import logo4 from '../images/resume-4.jpg';
-import logo5 from '../images/resume-5.jpg';
-import logo6 from '../images/resume-6.jpg';
-import logo7 from '../images/resume-7.png';
-import logo8 from '../images/resume-8.jpg';
-// import logo9 from '../images/resume-9.jpg';
+import { Fragment, useState } from "react";
+import Navbar from './Navbar';
+import Jumbotron from "./Jumbotron";
+import Login from "./Login";
+import Register from "./Register";
+import FooterComp from './FooterComp';
+import ResumeImages from "./ResumeImages";
+import AboutUs from "./AboutUs";
 
+import './Home.css';
+
+const DUMMY_USERS = [
+    { id: 'e1', firstName: 'Vishakha', lastName: 'Sahu', email: 'vish@gmail.com', pass: '1234' },
+    { id: 'e2', firstName: 'Ankit', lastName: 'Sharma', email: 'ankit@gmail.com', pass: '1234' },
+    { id: 'e3', firstName: 'Neha', lastName: 'Sood', email: 'neha@gmail.com', pass: '1234' },
+    { id: 'e4', firstName: 'Vikas', lastName: 'Nene', email: 'vikas@gmail.com', pass: '1234' }
+];
 
 const Home = props => {
+    const [showLogin, setShowLogin] = useState(false);
+    const [showRegister, setShowRegister] = useState(false);
+    const [usersList, setUsersList] = useState(DUMMY_USERS);
+    const [showHome, setShowHome] = useState(true);
+    const [showAboutUs, setShowAboutUs] = useState(false);
+
+    const onSignUpHandler = () => {
+        setShowHome(false);
+        setShowLogin(false);
+        setShowRegister(true);
+        setShowAboutUs(false);
+    };
+
+    const onNewUserSignedUpHandler = (newUser) => {
+        setUsersList((prevUsers) => {
+            return [newUser, ...prevUsers];
+        });
+        setShowLogin(true);
+        setShowRegister(false);
+        setShowAboutUs(false);
+    }
+
+    const onClickIconHome = () => {
+        setShowHome(false);
+        setShowLogin(true);
+        setShowRegister(false);
+        setShowAboutUs(false);
+    }
+
+    const onClickOfHome = () => {
+        setShowHome(true);
+        setShowLogin(false);
+        setShowRegister(false);
+        setShowAboutUs(false);
+    }
+
+    const onClickShowFooter = () => {
+        setShowAboutUs(true);
+        setShowHome(false);
+        setShowRegister(false);
+        setShowLogin(false);
+    }
+
     return (
         <Fragment>
-            <div class="homeContainer">
-                <div class="jumbotron">
-                    <h1 class="display-4 textBold ">Build your Resume Now!</h1>
-                    <p class="lead colorItBlue">The Goal of your Resume is not getting you a Job, But to screen you through Thousands of Applied Ones.</p>
-                    <hr class="my-4" />
-                    <p class="textBig">Here we are to help you get through the very First Job screening</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg btn-transition " href="#" role="button">Pick a Template</a>
-                    </p>
-                </div>
+            <Navbar toGoHome={onClickOfHome} onClickIcon={onClickIconHome} />
 
-                <div class="container" >
-                    <div class="item-1" >
-                        <img src={logo1} height="469px" width="354" />
-                    </div>
-                    <div class="item-2" >
-                        <img src={logo2} height="469px" width="354" />
-                    </div>
-                    <div class="item-3" >
-                        <img src={logo3} height="469px" width="354" />
-                    </div>
-                    <div class="item-4">
-                        <img src={logo4} height="469px" width="354" />
-                    </div>
-                </div>
-                <div class="container" >
-                    <div class="item-5" >
-                        <img src={logo5} height="469px" width="354" />
-                    </div>
-                    <div class="item-6" >
-                        <img src={logo6} height="469px" width="354" />
-                    </div>
-                    <div class="item-7" >
-                        <img src={logo7} height="469px" width="354" />
-                    </div>
-                    <div class="item-8">
-                        <img src={logo8} height="469px" width="354" />
-                    </div>
-                </div>
+            {showAboutUs && <AboutUs />}
+            {showHome && <div>
+                <Jumbotron />
+                <ResumeImages />
+            </div>}
+            <div className="App-header">
+                {showLogin && <Login onSignUp={onSignUpHandler} userList={usersList} showHomePage={onClickOfHome} />}
+                {showRegister && <Register onSignUp={onNewUserSignedUpHandler} />}
             </div>
+
+            <footer>
+                <FooterComp onClickResumeJob={onClickOfHome} onFooterClicks={onClickShowFooter} />
+            </footer>
         </Fragment >
     );
 };

@@ -1,0 +1,32 @@
+.jumbotron {
+    background-color: rgb(253, 253, 253);
+    padding-bottom: 5px;
+    padding-top: 10px;
+    top: 20%;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.textBold {
+    font-weight: 400;
+    color: rgb(81, 80, 80);
+}
+
+.textBig {
+    font-size: 1.2em;
+}
+
+.colorItBlue {
+    color: rgb(22, 22, 92);
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.btn-transition:hover {
+    transition: .2s;
+}
+
+.btn-transition:hover {
+    transform: scale(1.1);
+}

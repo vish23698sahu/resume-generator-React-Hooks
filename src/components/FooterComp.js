@@ -26,7 +26,7 @@ const FooterComp = (props) => {
                         </div>
                     </div>
                     <div className={`${classes.partTwo}`} >
-                        <div className={`${classes['item-5']}`} >Company</div>
+                        <div className={`${classes['item-5']}`} onClick={props.onFooterClicks} >Company</div>
                         <div className={`${classes['item-6']}`}>About Us</div>
                         <div className={`${classes['item-7']}`}>Carreers</div>
                         <div className={`${classes['item-8']}`}>Contact Us</div>

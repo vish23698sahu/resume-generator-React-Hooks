@@ -20,15 +20,15 @@ const Navbar = (props) => {
                                 Resume
                             </a>
                             <ul class="dropdown-menu colorBlue " aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item colorTextWhite" href="#">Education</a></li>
-                                <li><a class="dropdown-item colorTextWhite" href="#">First Job</a></li>
-                                <li><a class="dropdown-item colorTextWhite" href="#">Internship</a></li>
+                                <li><a class="dropdown-item dropDownColour colorTextWhite" href="#">Education</a></li>
+                                <li><a class="dropdown-item dropDownColour colorTextWhite" href="#">First Job</a></li>
+                                <li><a class="dropdown-item dropDownColour colorTextWhite" href="#">Internship</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-primary colorTextWhite" type="submit">Search</button>
+                        <button class="btn btn-outline-primary colorTextWhite" onClick={props.toGoHome} type="submit">Search</button>
                     </form>
                     <div onClick={props.onClickIcon} className={"iconLogin"}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">

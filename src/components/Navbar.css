@@ -5,13 +5,10 @@
 
 .colorTextWhite {
     color: white;
+    cursor: pointer;
 }
 
 .colorTextWhite:hover {
-    color: white;
-}
-
-.dropdown-toggle:hover {
     color: white;
 }
 
