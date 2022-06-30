@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+.partOne {
+    width: 23%;
+    padding-left: 5%;
+    justify-content: left;
+    text-align: left;
+}
+
+.partTwo {
+    padding-left: 8%;
+    padding-top: .5%;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.partThree {
+    padding-left: 4%;
+    padding-top: .5%;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.partFour {
+    padding-top: .5%;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.onClickHover {
+    color: rgb(23, 23, 94);
+    cursor: pointer;
+}
+
+.onIconHover {
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+}
+
+.item-1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.item-2 {
+    word-wrap: break-word;
+}
+
+.item-4 {
+    padding-top: 4%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.item-5 {
+    color: rgb(23, 23, 94);
+    font-weight: 500;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+
+.item-6 {
+    font-size: 1.2em;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.item-7 {
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.item-8 {
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.item-6:hover {
+    color: rgb(5, 107, 73);
+}
+
+.item-7:hover {
+    color: rgb(5, 107, 73);
+}
+
+.item-8:hover {
+    color: rgb(5, 107, 73);
+}

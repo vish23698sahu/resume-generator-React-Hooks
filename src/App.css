@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
   background-color: #dde3f2;
 }
@@ -10,6 +10,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(5, 5, 5);
+  background-color: #dde3f2;
   height: 100%;
   padding: 10px;
 }

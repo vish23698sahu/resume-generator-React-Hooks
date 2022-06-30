@@ -17,9 +17,9 @@ const Home = props => {
             <div class="homeContainer">
                 <div class="jumbotron">
                     <h1 class="display-4 textBold ">Build your Resume Now!</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <p class="lead colorItBlue">The Goal of your Resume is not getting you a Job, But to screen you through Thousands of Applied Ones.</p>
                     <hr class="my-4" />
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p class="textBig">Here we are to help you get through the very First Job screening</p>
                     <p class="lead">
                         <a class="btn btn-primary btn-lg btn-transition " href="#" role="button">Pick a Template</a>
                     </p>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import FooterComp from './components/FooterComp';
 import Home from './components/Home';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
@@ -49,13 +50,16 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <Navbar toGoHome={onClickOfHome} onClickIcon={onClickIconHome} />
       {showHome && <Home />}
       <div className="App-header">
         {showLogin && <Login onSignUp={onSignUpHandler} userList={usersList} />}
         {showRegister && <Register onSignUp={onNewUserSignedUpHandler} onButtonClick={onRegisterClick} />}
       </div>
+      <footer>
+        <FooterComp onClickResumeJob={onClickOfHome} />
+      </footer>
     </div>
   );
 }
