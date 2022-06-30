@@ -7,6 +7,10 @@
     color: white;
 }
 
+.colorTextWhite:hover {
+    color: white;
+}
+
 .dropdown-toggle:hover {
     color: white;
 }

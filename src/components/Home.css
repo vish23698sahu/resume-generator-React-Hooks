@@ -1,0 +1,101 @@
+.jumbotron {
+    background-color: rgb(253, 253, 253);
+    padding-bottom: 5px;
+    padding-top: 10px;
+    top: 20%;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.textBold {
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    padding: 10px;
+}
+
+.btn-transition:hover {
+    transition: .2s;
+}
+
+.btn-transition:hover {
+    transform: scale(1.1);
+}
+
+.item-1 {
+    transition: .2s;
+}
+
+.item-1:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+.item-2 {
+    transition: .2s;
+}
+
+.item-2:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+
+.item-3 {
+    transition: .2s;
+}
+
+.item-3:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+.item-4 {
+    transition: .2s;
+}
+
+.item-4:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+.item-5 {
+    transition: .2s;
+}
+
+.item-5:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+.item-6 {
+    transition: .2s;
+}
+
+.item-6:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+.item-7 {
+    transition: .2s;
+}
+
+.item-7:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}
+
+.item-8 {
+    transition: .2s;
+}
+
+.item-8:hover {
+    border: 1px solid rgb(14, 16, 14);
+    transform: scale(1.1);
+}

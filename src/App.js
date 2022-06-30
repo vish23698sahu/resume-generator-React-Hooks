@@ -52,10 +52,10 @@ function App() {
     <div className="App">
       <Navbar toGoHome={onClickOfHome} onClickIcon={onClickIconHome} />
       {showHome && <Home />}
-      <header className="App-header">
+      <div className="App-header">
         {showLogin && <Login onSignUp={onSignUpHandler} userList={usersList} />}
         {showRegister && <Register onSignUp={onNewUserSignedUpHandler} onButtonClick={onRegisterClick} />}
-      </header>
+      </div>
     </div>
   );
 }

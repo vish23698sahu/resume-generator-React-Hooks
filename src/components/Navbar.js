@@ -22,7 +22,6 @@ const Navbar = (props) => {
                             <ul class="dropdown-menu colorBlue " aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item colorTextWhite" href="#">Education</a></li>
                                 <li><a class="dropdown-item colorTextWhite" href="#">First Job</a></li>
-                                <li><hr class="dropdown-divider colorTextWhite" /></li>
                                 <li><a class="dropdown-item colorTextWhite" href="#">Internship</a></li>
                             </ul>
                         </li>

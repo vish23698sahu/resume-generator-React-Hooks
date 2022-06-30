@@ -69,7 +69,6 @@ const Register = props => {
         <Fragment>
             <div className={classes.loginBody} >
                 <p>Please enter your details</p>
-                {/* {detailsEmpty && <h6 className={classes.colorRedText} >Kindly provide all the details</h6>} */}
                 {nameEmpty && <h6 className={classes.colorRedText} >Please enter your name.</h6>}
                 {lNameEmpty && <h6 className={classes.colorRedText} >Please enter your Last Name</h6>}
                 {emailEmpty && <h6 className={classes.colorRedText} >Please enter your email</h6>}
