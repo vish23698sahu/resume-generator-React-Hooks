@@ -1,33 +1,45 @@
 import { Fragment, useState } from "react";
 import classes from './Login.module.css';
 
-
 const Login = props => {
     const [enteredEmail, setEnteredEmail] = useState('');
     const [enteredPass, setEnteredPass] = useState('');
     const [credentialsMatched, setCredentialsMatched] = useState(true);
 
-    const onLoginHandler = (event) => {
+    const onLoginHandler = async (event) => {
         event.preventDefault();
-        const emailsInDB = props.userList.map(user => user.email);
-        const passInDB = props.userList.map(user => user.pass);
 
-        for (const e of emailsInDB) {
-            if (e === enteredEmail) {
-                console.log('Login successful!');
-                props.showHomePage();
-                return;
+        const response = await fetch('https://login-signup-portfolio-default-rtdb.firebaseio.com/Users.json');
+        const responseData = await response.json();
+        const loadedUsers = [];
+
+        for (const i in responseData) {
+            loadedUsers.push({
+                id: i,
+                name: responseData[i].user.name,
+                lastName: responseData[i].user.lastName,
+                email: responseData[i].user.email,
+                password: responseData[i].user.pass
+            });
+        }
+
+        for (const em in loadedUsers) {
+            if (enteredEmail === loadedUsers[em].email) {
+                console.log('email authenticated');
+                if (enteredPass === loadedUsers[em].password) {
+                    console.log('User Authenticated');
+                    props.showHomePage();
+                    return;
+                }
+                else {
+                    console.log('Invalid Password!');
+                    setCredentialsMatched(false);
+                }
+            }
+            else {
+                setCredentialsMatched(false);
             }
         }
-        for (const p in passInDB) {
-            if (p === enteredPass) {
-                console.log('Login successful!');
-                props.showHomePage();
-                return;
-            }
-        }
-        //if credentials are not valid
-        setCredentialsMatched(false);
     }
 
     const onEmailChangeHandler = (event) => {
